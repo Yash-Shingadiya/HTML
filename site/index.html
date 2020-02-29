@@ -1,10 +1,90 @@
+<!-- doctype html tells the browser to render it as an html pade -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<!-- Title is important. Without it page won't be rendered -->
 	<title>Hello Coursera</title>
 </head>
 <body>
-	
+	<!--Header can be used for showing company logo and can be navigated using nav -->
+	<header>
+		<nav></nav>
+	</header>
+<!--onclick is name of an attribute and alert is it's value. It is like action listener which tells you what to do on being clicked -->	
+<h1 onclick="alert('hi')">Hello Coursera!</h1>	
+<!-- There are 3 main symbols that should be escaped else they might create pproblem while rendering of the page. They are < , > , &.
+Instead of these symbols use character entity references like &lt; , &gt; , &amp; -->
+<h1>My height is < Vatsal but > Kaustubh & Shanahan<span>This is wrong&nbsp;way&nbsp;to&nbsp;do&nbsp;so</span></h1>
+<h2>My height is &lt; Vatsal but &gt; Kaustubh &amp; Shanahan</h2>
+<!-- nbsp is for not breaking space means if you want to keep something wrapped around together no matter what is the size of the screen
+	then you can save the line from falling apart even though the size of the screen has been changed -->
+<p></p>
+<!-- br, hr, img , meta, etc are the tags that do not require ending tags -->
+<!-- br stands for break line, hr stands for horizontal line -->
+<br>
+<hr>
+<!--There are two types of content models : block elements and inline elements
+	block elements always start from next line and may contain inline elements but inline elements can contain only inline elements and 
+	they start from same line.
+	div is an example of block element whereas span is an example of inline element -->
+<div>
+	<span></span>
+</div>
+<!--There are 2 types of lists ul which stands for unordered lists and ol means ordered lists. Inside ul or ol to mention the list items
+	<li></li> tag is mandatory which stands for list items -->
+<ul>
+	<li></li>
+	<li></li>
+	<li>
+		<ul>
+			<li></li>
+			<li></li>
+		</ul>
+
+	</li>
+</ul>
+<ol>
+	<li></li>
+	<li></li>
+	<li>
+		<ol>
+			<li></li>
+			<li></li>
+		</ol>
+	</li>
+</ol>
+<!-- You can write section inside an article or an article inside a section -->
+<article>
+	<section id="section1">This is Sectiion 1</section>
+</article>
+<section>
+	<article></article>
+</section>
+<!--a tag is both inline and block element. Also, while showing up external links it is a good habit to mention target along with
+href. target = "_blank" allows you to open that specified link address in a new tab -->	
+<a href="https://www.google.com/" target="_blank" title="My Google">Click to go to google's website</a>
+<a href="https://www.google.com/" title="Google">
+	<div>Click to go to google's website</div>
+</a>
+<!--While displaying an image it is a good habit to mention width and height so that browser is aware about how much space the 
+image might need while rendering the page and it saves that much space for the image till it loads --> 
+<img src="batman-2.jpg" width="600" height="450">
+<!-- It is very important to have links which takes you to different sections within a same page. To do so we need to associate 
+an id first where ever you want to take the user and then href = #id_value -->
+<h1 id="#top">Links to move within different sections in a same page</h1>
+	<section>
+		<ul>
+			<li><a href="#section1">section1</a></li>
+			<li><a href="#section2">section2</a></li>
+			<li><a href="#section3">section3</a></li>
+		</ul>
+	</section>	
+	<section id="section2">This is section 2</section>
+	<section id="section3">This is section 3</section>
+<aside></aside>
+<p><a href="#top">Back to top</a></p>
+<!-- &copy; is for special character that displays copyright symbol -->
+<footer>X Foundations &copy; Copyright</footer>
 </body>
 </html>
